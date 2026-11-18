@@ -1,0 +1,15 @@
+{
+  "version": "0.1.100",
+  "testBaseline": "0.1.99",
+  "channel": "board-specific",
+  "targetRuntimeSerial": "42003B001650304B59383820",
+  "signingKeySha256": "01edecf6ae9420e37c8dc9ce9b2f0217588a7da503f87d2a128fdbcd646d5bc7",
+  "sha256": {
+    "SteadyNode-V2-0.1.100-slot-a.sun2": "9f80bb9def62d871d28922035824324329db3fbd9f84a753a413b54cda5f9fa8",
+    "SteadyNode-V2-0.1.100-slot-b.sun2": "688f722e22f61822fac90c2b52b450a60039e45a3062f1cfa2744d876df8ea61",
+    "SteadyNode-V2-0.1.100.snp": "af689ed08686637422d28dc25a2151a704690105cbeff58bb31dc8fe9e41a3ad"
+  },
+  "sourceSnapshotSha256": "fde3f721dc2aebdc7db27c09d15639478de8d4f88b1c4be74a54430fc40ad4bb",
+  "baselineValidation": "0.1.99 installed on exact board, persistent healthy Slot A boot verified, configuration preserved; served HTML/JS/CSS match build snapshot.",
+  "candidateValidation": "Both slot builds and Ed25519 signatures verified. Source differs only in version numbers. Actual 0.1.99 browser controller simulated relay of signed 0.1.100 Slot B passed; physical candidate update left to owner."
+}

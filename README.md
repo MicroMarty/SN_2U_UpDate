@@ -1,20 +1,20 @@
-# Steady Node firmware update test
+# Steady Node firmware updates
 
-## 0.1.97 -> 0.1.98
+## Test: 0.1.99 → 0.1.100
 
-This test pair is exclusively for board ROM DFU `2073389B4B30`, USB runtime serial `42003B001650304B59383820`, signed by its existing approved board key. Production trust is unchanged.
+The connected test board is running **0.1.99** with the simplified firmware interface. **0.1.100** is available here to test the full update flow.
 
-1. The owner installs the locally prepared **0.1.97 sparse provisioning HEX** using USB/DFU.
-2. Open the Steady Node dashboard with browser Internet access: it announces **0.1.98**.
-3. Open Firmware, click **Check for updates**, then confirm **Install signed update**.
-4. After restart the device should report **0.1.98**; another check should report that firmware is up to date.
+1. Refresh the device dashboard: the Firmware button in Support shows a red **1**.
+2. Open Firmware: the available version and **Update Steady Node** button are ready.
+3. Confirm once. Progress shows downloading, transfer, installation and restart.
+4. The device returns to the main page with a success message after the expected firmware responds.
+
+Current version, **Check for updates**, and local-file installation remain available. The server address and Last check are not shown in the device interface.
 
 Stable manifest: https://micromarty.github.io/SN_2U_UpDate/latest.json
 
-Both versions include a visible error when the update server is unreachable. Their source differs only in version numbers. Checking downloads only the small descriptor; installation downloads one signed inactive-slot bundle (209993 bytes).
+[0.1.100 local upload package](https://micromarty.github.io/SN_2U_UpDate/releases/0.1.100/SteadyNode-V2-0.1.100.snp)
 
-[0.1.98 local-upload package](https://micromarty.github.io/SN_2U_UpDate/releases/0.1.98/SteadyNode-V2-0.1.98.snp)
+These builds are exclusively for ROM DFU board `2073389B4B30`, USB runtime `42003B001650304B59383820`, signed by its existing approved board key. Production trust is unchanged. Baseline 0.1.99 was physically verified; the 0.1.100 candidate is compiled and signed for the owner to test. Both sources differ only in version numbers.
 
-Both slots, signatures, image hashes, reset vectors, browser tests and a simulated relay using the real binaries have been checked. Physical flash and boot validation are left to the owner. See releases/0.1.98/release.json for artifact hashes.
-
-Only signed public update artifacts and release metadata are published. No private keys, firmware source or DFU provisioning image is included.
+See releases/0.1.100/release.json for hashes and validation details. Only public firmware artifacts and metadata are published; no source, private signing keys or provisioning images.
