@@ -1,0 +1,15 @@
+{
+  "version": "0.1.102",
+  "testBaseline": "0.1.101",
+  "channel": "board-specific",
+  "targetRuntimeSerial": "42003B001650304B59383820",
+  "signingKeySha256": "01edecf6ae9420e37c8dc9ce9b2f0217588a7da503f87d2a128fdbcd646d5bc7",
+  "sha256": {
+    "SteadyNode-V2-0.1.102-slot-a.sun2": "970270a264532123e3dc2970383e39dcec0e5acce11c7e390ccc7296ddfb12e6",
+    "SteadyNode-V2-0.1.102-slot-b.sun2": "cea5a075c1b2713c4863cad61536d02fe8f145868b57743ee97b5f9cfe905c1e",
+    "SteadyNode-V2-0.1.102.snp": "bd4ee14880ff13b25a2dda0e767ab72c595af04114fa9c3291c61797b9dd4cf9",
+    "SteadyNode-V2-0.1.101.snp": "4d3dba8357e6494c7389f16aa4c0904db6b2031d5f838c816c3307bc4be34f92"
+  },
+  "bootstrapPackage": "https://micromarty.github.io/SN_2U_UpDate/releases/0.1.101/SteadyNode-V2-0.1.101.snp",
+  "validation": "Both signed slot builds verified; sources differ only in version numbers. Mocked compatibility/error/size-limit tests passed. Physical Safari failure root cause is not yet confirmed; owner testing required."
+}
