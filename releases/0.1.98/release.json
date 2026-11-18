@@ -1,0 +1,14 @@
+{
+  "version": "0.1.98",
+  "testBaseline": "0.1.97",
+  "channel": "board-specific",
+  "targetRuntimeSerial": "42003B001650304B59383820",
+  "signingKeySha256": "01edecf6ae9420e37c8dc9ce9b2f0217588a7da503f87d2a128fdbcd646d5bc7",
+  "sha256": {
+    "SteadyNode-V2-0.1.98-slot-a.sun2": "0cc27624dc3073061bf292cb9ac89e7e03c5d4c8851f02b0bf07ef322cd0683c",
+    "SteadyNode-V2-0.1.98-slot-b.sun2": "320ab1fb7679e72d1a8f2d60bb718e34e4b6d0861d0d5d2149829d3e4f4e2c97",
+    "SteadyNode-V2-0.1.98.snp": "4b33cc7e0272e597d84e52845cefb5deb1c742d31fcfc4bef776795f40a73c78"
+  },
+  "sourceSnapshotSha256": "5d8ccdcc3c9d67ee5daa0b543c49e57bbab65ecd354987a52a5de31028b72cdb",
+  "validation": "Both signed slot builds verified. Source differs from 0.1.97 only in version numbers. Real 0.1.97 browser simulated relay of signed 0.1.98 Slot B passed. Physical installation to be performed by owner."
+}
