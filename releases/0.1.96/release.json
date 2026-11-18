@@ -1,0 +1,13 @@
+{
+  "version": "0.1.96",
+  "channel": "board-specific",
+  "targetRuntimeSerial": "42003B001650304B59383820",
+  "signingKeySha256": "01edecf6ae9420e37c8dc9ce9b2f0217588a7da503f87d2a128fdbcd646d5bc7",
+  "sha256": {
+    "SteadyNode-V2-0.1.96-slot-a.sun2": "607bb35b90dad0cf4a43934058f0e0c823e8e8a6558f10d27dd28345561325fe",
+    "SteadyNode-V2-0.1.96-slot-b.sun2": "e8d5c7c2c68edbb796c07df48f09bf3a7d2a0b726c110fe8083453c62c14484a",
+    "SteadyNode-V2-0.1.96.snp": "ba9c88033222c636e262a5d31bbb6556b15f1f178d3755e317622ed3b35f72a8"
+  },
+  "sourceSnapshotSha256": "997d4cba81ccbfefa886d7534f1e46ca416173228960fd1a9ea2140bf5a77a2a",
+  "validation": "Both slot builds, Ed25519 signatures and host update tests verified. No physical boot test for this version."
+}
