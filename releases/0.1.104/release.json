@@ -1,0 +1,35 @@
+{
+  "version": "0.1.104",
+  "channel": "board-specific",
+  "targetRuntimeSerial": "42003B001650304B59383820",
+  "signingKeySha256": "01edecf6ae9420e37c8dc9ce9b2f0217588a7da503f87d2a128fdbcd646d5bc7",
+  "sourceCommit": "6c482def84345f35e7c663dfe6f5b5ba4f2d6487",
+  "vendorPatch": "docs/patches/tinyusb-rx-diagnostics.patch",
+  "toolchain": "GNU Arm GCC 13.3.1; CMake 4.0.1; Ninja 1.13.1",
+  "sha256": {
+    "SteadyNode-V2-0.1.104-slot-a.sun2": "0bf2c426e238a1af542a4fc231542a49a7182a6c08c2d76e74639e314e99ed4d",
+    "SteadyNode-V2-0.1.104-slot-b.sun2": "7bda5ce51af57bf28d662600f98431aaf7dde75781f4f90c949f6d51e3da7f3e",
+    "SteadyNode-V2-0.1.104.snp": "9d20d4552c8c560dc7bff4de0f731e9b7319088951bc6cc90fea36ce40b2b236"
+  },
+  "slots": {
+    "A": {
+      "bundleBytes": 214725,
+      "imageBytes": 214580,
+      "imageSha256": "74774bfc6cab24d9d40c4a72b309f15a3090b49bdde7fbf6e147afba689bf43e",
+      "initialStackPointer": "0x20020000",
+      "resetVector": "0x8021509",
+      "flashBytes": 214376,
+      "ramBytes": 110368
+    },
+    "B": {
+      "bundleBytes": 214725,
+      "imageBytes": 214580,
+      "imageSha256": "0f66ea8bda9ee8e935a5040ca76cab9a294255759489a12f677bdbb98ff173cb",
+      "initialStackPointer": "0x20020000",
+      "resetVector": "0x8059509",
+      "flashBytes": 214376,
+      "ramBytes": 110368
+    }
+  },
+  "validation": "Both slots compiled with local update upload enabled. Ed25519 signatures independently verified with OpenSSL; image hashes, vectors, versions and source stability checked. Update browser tests, publication tests and embedded web asset checks passed. No physical installation or boot validation for 0.1.104."
+}
