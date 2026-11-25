@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steady Node Firmware Update</title>
+</head>
+<body>
+  <main>
+    <h1>Steady Node Firmware Update</h1>
+    <p id="current-version" role="status">Checking the current version…</p>
+    <p>On your Steady Node, open <strong>Firmware Update</strong> and select <strong>Check for Update</strong>.</p>
+    <p id="manual-update" hidden>
+      <a id="manual-download" download>Download the manual update (.snp)</a>
+      and select <strong>Install from Local File</strong> on the Firmware Update page.
+    </p>
+    <p><a href="latest.json">Update manifest</a></p>
+    <section aria-labelledby="release-history">
+      <h2 id="release-history">Release history</h2>
+      <p>To return to an earlier release, download its SNP file, select
+        <strong>Install from Local File</strong>, and confirm the downgrade.</p>
+      <p id="release-history-status" role="status">Loading release history…</p>
+      <ul id="release-downloads"></ul>
+    </section>
+  </main>
+  <script>
+    const currentVersion = document.getElementById('current-version');
+    fetch('latest.json', {cache: 'no-store'})
+      .then(response => {
+        if (!response.ok) throw new Error('Manifest unavailable');
+        return response.json();
+      })
+      .then(({displayVersion, version, manualDownload}) => {
+        currentVersion.textContent = 'Current Version ' + (displayVersion || 'Steady Node ' + version);
+        if (manualDownload) {
+          document.getElementById('manual-download').href = manualDownload;
+          document.getElementById('manual-update').hidden = false;
+        }
+      })
+      .catch(() => { currentVersion.textContent = 'Current version unavailable'; });
+
+    const historyStatus = document.getElementById('release-history-status');
+    fetch('releases.json', {cache: 'no-store'})
+      .then(response => {
+        if (!response.ok) throw new Error('Release history unavailable');
+        return response.json();
+      })
+      .then(({releases}) => {
+        const downloads = document.getElementById('release-downloads');
+        for (const {version, manualDownload} of releases) {
+          const item = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = manualDownload;
+          link.download = '';
+          link.textContent = 'SteadyNode ' + version + ' (.snp)';
+          item.append(link);
+          downloads.append(item);
+        }
+        historyStatus.hidden = true;
+      })
+      .catch(() => { historyStatus.textContent = 'Release history unavailable'; });
+  </script>
+</body>
+</html>

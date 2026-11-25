@@ -1,0 +1,9 @@
+{
+  "format": 1,
+  "releases": [
+    {
+      "version": "1.2.0",
+      "manualDownload": "releases/1.2.0/SteadyNode-1.2.0.snp"
+    }
+  ]
+}

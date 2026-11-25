@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "available": true,
+  "product": "SteadyNode",
+  "hardware": "STM32G474RET6",
+  "version": "1.2.0",
+  "releaseVersion": "1.2.0",
+  "slots": {
+    "A": {
+      "bundleUrl": "https://micromarty.github.io/SN_2U_UpDate/releases/1.2.0/SteadyNode-1.2.0-slot-a.sun2",
+      "bundleSizeBytes": 224145
+    },
+    "B": {
+      "bundleUrl": "https://micromarty.github.io/SN_2U_UpDate/releases/1.2.0/SteadyNode-1.2.0-slot-b.sun2",
+      "bundleSizeBytes": 224145
+    }
+  },
+  "displayVersion": "1.2.0",
+  "signingKeySha256": "01edecf6ae9420e37c8dc9ce9b2f0217588a7da503f87d2a128fdbcd646d5bc7",
+  "manualDownload": "releases/1.2.0/SteadyNode-1.2.0.snp"
+}
